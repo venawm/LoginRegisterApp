@@ -4,6 +4,7 @@ const cors = require('cors')
 const port = 9001
 
 const routes = require('./routes/login.router')
+const dashboardRoutes = require('./routes/dashboard')
 
 app.use(express.json())
 app.use(cors())
