@@ -1,8 +1,5 @@
-.Main{
-    h1{
-        color: #ff2424;
-    }
-    .loginform{
+.register{
+    .registerform{
         margin-top: 2rem;
         border: 2px solid rgb(203 203 203 / 23%);
         height: 80vh;
@@ -46,14 +43,14 @@
             min-height: 3rem;
             border: none;
             border-radius: 1rem;
-            background-color: #0000d3;
+            background-color: #03a700;
             color: white;
             font-size: 100%;
             font-weight:900;
         }
         .newuser{
             color: white;
-            background-color: #03a700;
+            background-color: rgb(40, 201, 0);
             
         }
     }

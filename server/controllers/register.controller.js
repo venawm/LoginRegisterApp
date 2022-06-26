@@ -4,6 +4,7 @@ const jwtGenerator = require('../jwt.generator')
 
 async function registerUser(req,res){
     try {
+        console.log(req.body)
         const{name,email,password} = req.body
         
         const user = await pool.query('SELECT * FROM users WHERE user_email = $1',[email])
