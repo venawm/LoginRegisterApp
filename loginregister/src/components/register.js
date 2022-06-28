@@ -2,19 +2,23 @@ import React,{useState} from 'react';
 import axios from 'axios'
 import './scss/register.scss'
 
-const Register = () => {
+const Register = ({setIsAuthinticated}) => {
     const [loginDetails,setLoginDetails] = useState({"name":"","email":"","password":""})
 
     const inputHandler=(e)=>{
        setLoginDetails({...loginDetails,[e.target.name]:e.target.value})
-       console.log(loginDetails)
+       
     }
     const registerUser = async(e)=>{
         try {
             e.preventDefault()
             const body = loginDetails
-           axios.post('http://localhost:9001/auth/register',body)
+           axios.post('http://localhost:9001/auth/register',body).then((data)=>{
+            const token = data.data.token
+           })
             console.log(body)
+
+            setIsAuthinticated(true)
     
             
         } catch (error) {

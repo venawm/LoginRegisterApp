@@ -5,5 +5,6 @@ const authorization = require('../middlewares/authorization')
 const dashboardHandler = require('../controllers/dashboard.controller')
 
 
+
 router.get('/dashboard',authorization,dashboardHandler)
 module.exports = router

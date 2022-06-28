@@ -15,6 +15,7 @@ router.post('/auth/register',registerUser)
 router.post('/auth/login',loginUser)
 router.get('/verify',authorization,(req,res)=>{
     try {
+        
         res.json(true)
         
     } catch (error) {
